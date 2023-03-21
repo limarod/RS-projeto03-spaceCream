@@ -1,0 +1,277 @@
+/* font-family: 'Palanquin', sans-serif;
+font-family: 'Staatliches', cursive; */
+
+/* DIFICULDADE - Não consegui dar um margin bottom do Space Cream para o header */
+
+/* OUTRA DUVIDA - porque o meu main div:nth-child() tem que ser o 5 para pegar a última imagem. */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --ff-titles: 'Staatliches', cursive;
+  --ff-text: 'Palanquin', sans-serif;
+}
+
+.page{
+  max-width: 384px;
+  text-align: center;
+  margin: auto;
+}
+
+.img-desktop{
+  display: none;
+}
+
+header{
+  height: 27.9rem;
+  background-color: #8E9AAF ;
+  /* padding: 0 0 2.9rem 0; */
+  margin-bottom: 1.4rem;
+}
+
+
+header img {
+  /* padding: 3.2rem 0; */
+  margin-top: 3.2rem;
+  margin-bottom: 2.0rem;
+}
+
+
+header h1 {
+  font-family: var(--ff-titles);
+  font-size: 4rem;
+  line-height: 3.4rem;
+  font-weight: 400;
+
+  color: #fff ;
+  background-color: #CBC0D3 ;
+  padding: 8px 8.6rem;  
+}
+
+main{
+  max-width: 32rem;
+  margin: auto;
+  background-color: #EFF1FF;
+ 
+}
+
+.ajuste-desktop .p-desktop {
+  font-family: var(--ff-text);
+  font-size: 2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  background-color: #EFF1FF;
+  
+
+  max-width: 30.5rem;
+  margin: auto;
+  margin-bottom: 6.3rem;
+}
+
+main .card{
+  margin-bottom: 3.2rem;
+  position: relative;
+
+  animation-name: transition-img;
+  animation-duration: 1.5s;
+}
+
+main img{
+  transition: all;
+  transition-duration: 0.3s;
+}
+
+
+
+main h2{
+  font-family: var(--ff-titles);
+  font-size: 2rem;
+  line-height: 3.4rem;
+  font-weight: 400;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  background-color: white;
+  border-radius: 20px;
+  padding: 1px 23px;
+  color: #4A4E69;  
+
+  animation-name: transition-txt;
+  animation-duration: 1.7s;
+  animation-delay: 0.2s;
+}
+
+main .card img:hover{
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+
+main div:nth-child(5){
+  /* background-color: aqua; */
+  margin-bottom: 6rem;
+}
+
+.card-desktop{
+  display: none;
+}
+
+footer{
+  display: none;
+}
+
+@keyframes transition-img{
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+}
+
+@keyframes transition-txt {
+  0%{
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  
+}
+
+
+
+/* DESKTOP Version*/
+@media (min-width: 40em){
+
+
+  .img-desktop{
+    display: inline-flex;
+    margin: auto;
+    padding: 32px;
+    
+  }
+  
+  .img-mobile{
+    display: none;
+  }
+
+  .card-desktop{
+    display: inline-flex;
+  }
+
+  footer{
+    display: block;
+    width: 59.2rem ;
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 2.8rem;
+    text-align: center;
+    /* padding: 2px 80px; */
+   
+    position: absolute;
+    left: 54.1rem;
+    top: 64.6rem;
+    right: 14.7rem;
+    /* bottom: 4.6rem; */
+    
+  }
+
+  footer a{
+    text-decoration: none;
+    color: #000;
+  }
+
+  .page {
+    min-width: 128rem;
+    max-height: 72rem;
+    /* margin: 0; */
+    /* text-align: left; */
+    display: flex;
+    position: relative;
+  }
+
+ .ajuste-desktop{
+  height: 72rem;
+  max-width: 37.7rem ;
+  background-color: #8E9AAF;
+  display: inline-block;
+  margin: 0;
+}
+
+.p-desktop p{
+  background-color: #8E9AAF;
+  color: white;
+  margin-top: 5.2rem;
+  font-size: 2.4rem;
+  line-height: 2rem;
+}
+
+main{
+  margin: 0;
+}
+
+.container-grid{
+  max-width: 90rem ;
+  max-height: 72rem;
+  padding: 64px 80px 50px;
+
+  display: grid;
+  /* gap: 32px; */
+  column-gap: 3.2rem;
+  grid-template-areas:
+  "A B E"
+  "D B F"
+  "D C F";
+}
+
+
+.container-grid div:nth-child(1){
+   grid-area: A;
+}
+.container-grid div:nth-child(2){
+  grid-area: B;
+
+}
+.container-grid div:nth-child(3){
+  grid-area: C;  
+}
+
+.container-grid div:nth-child(4){
+  grid-area: D; 
+}
+
+.container-grid div:nth-child(5){
+  grid-area: E;
+}
+
+.container-grid div:nth-child(6){
+  grid-area: F;
+}
+
+
+.card img{
+  width: 22rem;
+  object-fit: cover;
+}
+
+.card h2{
+ display: none;
+}
+
+main .card{
+  margin: none;
+}
+
+header h1{
+  font-size: 4.8rem;
+  line-height: 3.4rem;
+  padding: 20px 73px;
+  margin-bottom: 5.2rem ;
+}
+
+
+}
